@@ -1,4 +1,16 @@
 // =====================
+// Intro Transition
+// =====================
+window.addEventListener("load", () => {
+  const intro = document.querySelector(".intro");
+
+  setTimeout(() => {
+    intro.style.animation = "fadeToHeader 1s ease forwards";
+    document.body.classList.add("loaded");
+  }, 2200); // slightly faster transition
+});
+
+// =====================
 // Navbar Toggle
 // =====================
 document.getElementById("menu-toggle").addEventListener("click", () => {
