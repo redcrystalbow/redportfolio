@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Worksheets | Red's Portfolio</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
   <header id="main-header">
     <h1 class="logo">Red's Portfolio</h1>
     <nav class="navbar">
-      <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+      <div class="menu-toggle" id="menu-toggle" tabindex="0">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="worksheets.html" class="active">Worksheets</a></li>
       </ul>
+      <input id="searchBar" type="text" placeholder="Search..." aria-label="Search site">
     </nav>
   </header>
 
-  <section class="section visible">
-    <h2>Completed Worksheets</h2>
-    <ul class="works-list">
-      <li><a href="HTML/basics-WORKSHEET.html" target="_blank">HTML Basics</a></li>
-      <li><a href="HTML/forms-WORKSHEET.html" target="_blank">Forms Worksheet</a></li>
-      <li><a href="HTML/hyperlinks-WORKSHEET.html" target="_blank">Hyperlinks Worksheet</a></li>
-      <li><a href="HTML/lists-WORKSHEET.html" target="_blank">Lists Worksheet</a></li>
-      <li><a href="HTML/tables-WORKSHEET.html" target="_blank">Tables Worksheet</a></li>
-      <li><a href="HTML/images-and-video-WORKSHEET.html" target="_blank">Images & Video Worksheet</a></li>
-    </ul>
-  </section>
+  <main>
+    <section class="section visible">
+      <h2>Completed Worksheets</h2>
+      <ul class="works-list">
+        <li><a href="HTML/basics-WORKSHEET.html" target="_blank" rel="noopener">HTML Basics Worksheet</a></li>
+        <li><a href="HTML/forms-WORKSHEET.html" target="_blank" rel="noopener">Forms Worksheet</a></li>
+        <li><a href="HTML/hyperlinks-WORKSHEET.html" target="_blank" rel="noopener">Hyperlinks Worksheet</a></li>
+        <li><a href="HTML/lists-WORKSHEET.html" target="_blank" rel="noopener">Lists Worksheet</a></li>
+        <li><a href="HTML/tables-WORKSHEET.html" target="_blank" rel="noopener">Tables Worksheet</a></li>
+        <li><a href="HTML/images-and-video-WORKSHEET.html" target="_blank" rel="noopener">Images & Video Worksheet</a></li>
+      </ul>
+    </section>
+  </main>
 
-  <footer>
-    &copy; 2025 Red's Portfolio
-  </footer>
-
+  <footer>&copy; 2025 Red's Portfolio</footer>
   <script src="main.js"></script>
 </body>
 </html>
