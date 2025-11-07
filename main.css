@@ -52,9 +52,7 @@ body {
   100% { width: 250px; height: 150px; }
 }
 
-@keyframes fadeInText {
-  to { opacity: 1; }
-}
+@keyframes fadeInText { to { opacity: 1; } }
 
 @keyframes fadeOut {
   0%, 80% { opacity: 1; }
@@ -146,6 +144,15 @@ header {
   text-align: center;
   max-width: 1000px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 25px rgba(255, 0, 51, 0.5);
 }
 
 .cards {
@@ -192,34 +199,3 @@ footer {
   }
   .nav-links.active { display: flex; }
 }
-
-/* Scroll Reveal Animations */
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-  box-shadow: 0 0 25px rgba(255, 0, 51, 0.5);
-}
-
-// Scroll Reveal Animation
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
