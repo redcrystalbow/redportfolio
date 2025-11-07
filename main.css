@@ -13,7 +13,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Intro Animation */
+/* =====================
+   Intro Animation
+===================== */
 .intro {
   position: fixed;
   inset: 0;
@@ -22,49 +24,52 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeOut 4s ease forwards;
-  animation-delay: 3s;
 }
 
 .intro-box {
   width: 0;
-  height: 0;
+  height: 2px;
   border: 2px solid var(--accent);
   box-shadow: var(--glow);
-  animation: boxBuild 2s ease forwards;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: boxExpand 1.5s ease forwards;
 }
 
 .intro-text {
   opacity: 0;
   color: var(--accent);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-shadow: 0 0 10px var(--accent);
-  animation: fadeInText 2s ease forwards 1s;
+  text-align: center;
+  animation: textFadeIn 1.5s ease forwards 0.8s;
 }
 
-@keyframes boxBuild {
+@keyframes boxExpand {
   0% { width: 0; height: 2px; }
   50% { width: 250px; height: 2px; }
-  100% { width: 250px; height: 150px; }
+  100% { width: 250px; height: 100px; }
 }
 
-@keyframes fadeInText { to { opacity: 1; } }
-
-@keyframes fadeOut {
-  0%, 80% { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
+@keyframes textFadeIn {
+  to { opacity: 1; }
 }
 
-/* Header / Navbar */
-header {
+@keyframes fadeToHeader {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.2); visibility: hidden; }
+}
+
+/* =====================
+   Header & Navbar
+===================== */
+#main-header {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,6 +77,12 @@ header {
   border-bottom: 2px solid var(--accent);
   box-shadow: var(--glow);
   z-index: 10;
+  opacity: 0;
+  transition: opacity 1s ease 2.5s;
+}
+
+body.loaded #main-header {
+  opacity: 1;
 }
 
 .logo {
@@ -138,7 +149,9 @@ header {
   transition: var(--transition);
 }
 
-/* Sections */
+/* =====================
+   Sections & Cards
+===================== */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -176,7 +189,9 @@ header {
   box-shadow: 0 0 25px var(--accent);
 }
 
-/* Footer */
+/* =====================
+   Footer
+===================== */
 footer {
   text-align: center;
   padding: 20px;
@@ -184,7 +199,9 @@ footer {
   box-shadow: var(--glow);
 }
 
-/* Responsive */
+/* =====================
+   Responsive
+===================== */
 @media (max-width: 768px) {
   .menu-toggle { display: flex; }
   .nav-links { 
