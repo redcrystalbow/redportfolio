@@ -1,54 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red's Portfolio</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-  <!-- Intro (plays once per session) -->
-  <div class="intro" id="intro" aria-hidden="true">
-    <div class="intro-box" id="intro-box">
-      <span class="intro-text">Welcome to Red's Portfolio</span>
+  <!-- Intro Animation -->
+  <div class="intro">
+    <div class="intro-box">
+      <span class="intro-text">Welcome to my portfolio</span>
     </div>
   </div>
 
   <!-- Header -->
-  <header id="main-header" role="banner">
+  <header>
     <h1 class="logo">Red's Portfolio</h1>
-    <nav class="navbar" role="navigation">
-      <div class="menu-toggle" id="menu-toggle" aria-label="Open menu" role="button" tabindex="0">
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-      </div>
-
+    <nav class="navbar">
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="worksheets.html">Worksheets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <input id="searchBar" type="text" placeholder="Search..." aria-label="Search site">
+      <input type="text" id="searchBar" placeholder="Search...">
     </nav>
   </header>
 
-  <!-- Main content -->
-  <main id="main" role="main">
-    <section id="home" class="section visible">
+  <section class="section">
+    <div class="card">
       <h2>About Me</h2>
-      <p>
-        Hello — I'm <strong>Red</strong>. I'm studying web & software development and learning networking and cybersecurity.
-        This portfolio highlights my worksheets, projects, and progress. Use the <em>Worksheets</em> page to open each worksheet.
-      </p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:redcrystalbow1@gmail.com">redcrystalbow1@gmail.com</a></p>
-    </section>
-  </main>
+      <p>Hello — I'm Red. I'm studying web & software development and learning networking and cybersecurity.
+      This portfolio highlights my worksheets, projects, and progress. Use the Worksheets page to open each worksheet.</p>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 Red's Portfolio
