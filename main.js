@@ -24,3 +24,14 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 sections.forEach(section => observer.observe(section));
+
+// Intro Animation — play once per session
+const intro = document.getElementById("intro");
+if (intro) {
+  if (sessionStorage.getItem("introPlayed")) {
+    intro.style.display = "none";
+  } else {
+    sessionStorage.setItem("introPlayed", "true");
+    setTimeout(() => { intro.style.display = "none"; }, 3000);
+  }
+}
