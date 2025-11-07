@@ -206,3 +206,20 @@ footer {
   box-shadow: 0 0 25px rgba(255, 0, 51, 0.5);
 }
 
+// Scroll Reveal Animation
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
