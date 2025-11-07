@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Red's Portfolio</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <!-- Intro Animation (plays once per session) -->
-  <div class="intro" id="intro">
-    <div class="intro-box">
+  <!-- Intro (plays once per session) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-box" id="intro-box">
       <span class="intro-text">Welcome to Red's Portfolio</span>
     </div>
   </div>
 
   <!-- Header -->
-  <header id="main-header">
+  <header id="main-header" role="banner">
     <h1 class="logo">Red's Portfolio</h1>
-    <nav class="navbar">
-      <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <nav class="navbar" role="navigation">
+      <div class="menu-toggle" id="menu-toggle" aria-label="Open menu" role="button" tabindex="0">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
       </div>
+
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="worksheets.html">Worksheets</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <input type="text" id="searchBar" placeholder="Search...">
+
+      <input id="searchBar" type="text" placeholder="Search..." aria-label="Search site">
     </nav>
   </header>
 
-  <!-- Home Content -->
-  <section id="home" class="section visible">
-    <h2>About Me</h2>
-    <p>
-      Hello! I’m <b>Red</b> — a passionate web and software developer who focuses on
-      building clean, interactive, and visually bold web experiences.
-      I enjoy blending design and functionality to create immersive digital spaces.
-      This portfolio showcases my web programming coursework and creative projects.
-    </p>
-  </section>
+  <!-- Main content -->
+  <main id="main" role="main">
+    <section id="home" class="section visible">
+      <h2>About Me</h2>
+      <p>
+        Hello — I'm <strong>Red</strong>. I'm studying web & software development and learning networking and cybersecurity.
+        This portfolio highlights my worksheets, projects, and progress. Use the <em>Worksheets</em> page to open each worksheet.
+      </p>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Reach me at <a href="mailto:redcrystalbow1@gmail.com">redcrystalbow1@gmail.com</a></p>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:redcrystalbow1@gmail.com">redcrystalbow1@gmail.com</a></p>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Red's Portfolio
