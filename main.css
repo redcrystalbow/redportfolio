@@ -6,7 +6,11 @@
   --transition: all 0.5s ease;
 }
 
-body {
+/* Base Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background: var(--bg);
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -99,6 +103,8 @@ header {
   display: flex;
   gap: 15px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -107,7 +113,8 @@ header {
   transition: var(--transition);
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: var(--accent);
   text-shadow: var(--glow);
 }
@@ -120,14 +127,16 @@ header {
   background: transparent;
   color: var(--text);
   box-shadow: var(--glow);
+  outline: none;
 }
 
 /* Sections */
 .section {
-  padding: 80px 20px;
-  text-align: center;
+  width: 90%;
   max-width: 1000px;
-  margin: auto;
+  margin: 80px auto;
+  padding: 60px 20px;
+  text-align: center;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
@@ -139,18 +148,61 @@ header {
   box-shadow: 0 0 25px rgba(255, 0, 51, 0.5);
 }
 
+.section h2 {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+  margin-bottom: 20px;
+}
+
+/* Works List */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  text-align: left;
+  max-width: 600px;
+}
+
+.works-list li {
+  margin: 10px 0;
+}
+
+.works-list a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.works-list a:hover {
+  text-shadow: 0 0 10px var(--accent);
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
   border-top: 2px solid var(--accent);
   box-shadow: var(--glow);
+  margin-top: 50px;
 }
 
-/* Responsive */
+/* Responsive Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--accent);
+  margin: 4px 0;
+  transition: var(--transition);
+}
+
 @media (max-width: 768px) {
-  .menu-toggle { display: flex; flex-direction: column; cursor: pointer; }
-  .bar { width: 25px; height: 3px; background: var(--accent); margin: 4px 0; }
+  .menu-toggle { display: flex; }
   .nav-links { 
     display: none;
     flex-direction: column;
@@ -162,24 +214,5 @@ footer {
     border-radius: 10px;
   }
   .nav-links.active { display: flex; }
-}
-
-/* Works List */
-.works-list {
-  list-style: none;
-  padding: 0;
-  margin: 30px auto;
-  text-align: left;
-  max-width: 600px;
-}
-.works-list li {
-  margin: 10px 0;
-}
-.works-list a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: var(--transition);
-}
-.works-list a:hover {
-  text-shadow: 0 0 10px var(--accent);
+  #searchBar { width: 100%; margin-top: 10px; }
 }
