@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hyperlinks Worksheet</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Links">
+  <meta name="viewport" content="width=device-width">
+  <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+</head>
+<body>
+
+  <h1>Hyperlinks Worksheet</h1>
+
+  <b>Question 1</b>
+  <p class="question">
+    Create a link to the default page of the web-programming folder of this site (it's the index.html file in the
+    web-programming folder).
+  </p>
+  <div class="answer">
+    <a href="index.html">Go to Web Programming Home Page</a>
+  </div>
+
+  <b>Question 2</b>
+  <p class="question">
+    Create a link to any website, but make it open in a new browser tab (set the <b>target</b> attribute to '_blank')
+  </p>
+  <div class="answer">
+    <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+  </div>
+
+  <b>Question 3</b>
+  <p class="question">
+    Why would we want to open a link in a new browser tab?
+  </p>
+  <div class="answer">
+    To let users open external links without leaving or losing their place on the current website.
+  </div>
+
+  <b>Question 4</b>
+  <p class="question">
+    Research 'bread crumb navigation'. Explain what it is and what are some advantages that it offers to users of a web site?
+  </p>
+  <div class="answer">
+    Breadcrumb navigation shows a user’s location within a website’s hierarchy (e.g., Home > Products > Electronics > Phones).  
+    It helps users easily backtrack, improves site usability, and enhances SEO by showing site structure.
+  </div>
+
+  <b>Coding Problem</b>
+  <p class="question">
+    Create a list that looks like this:
+  </p>
+  <pre>
+         <b>
+          1. Facebook
+          2. Google
+          3. Web Programming
+          	&#9900; HTML
+          	&#9900; CSS
+          	&#9900; JavaScript
+         </b>
+      </pre>
+
+  <div class="answer">
+    <ol>
+      <li>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      </li>
+      <li>
+        <a href="https://www.google.com" target="_blank">Google</a>
+      </li>
+      <li>
+        Web Programming
+        <ul>
+          <li>&#9900; <a href="#html">HTML</a></li>
+          <li>&#9900; <a href="#css">CSS</a></li>
+          <li>&#9900; <a href="#javascript">JavaScript</a></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <br>
+
+  <h3 id="html">HTML</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue, lacus eget venenatis ultricies...
+  </p>
+
+  <h3 id="css">CSS</h3>
+  <p>
+    Nullam quis varius quam. Quisque convallis est quis nisi consequat accumsan. Sed pretium sapien nec ex...
+  </p>
+
+  <h3 id="javascript">JavaScript</h3>
+  <p>
+    Nunc pellentesque erat libero. Duis efficitur, orci euismod egestas laoreet, ex ex ullamcorper lectus...
+  </p>
+
+  <footer>
+    &copy; 2024 Niall Kader
+  </footer>
+
+</body>
+</html>

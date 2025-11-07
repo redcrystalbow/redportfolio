@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Forms Worksheet</title>
+    <meta name="description" content="Forms">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width">
+    <link REL=StyleSheet HREF="../styles/main.css" TYPE="text/css">
+    <style type="text/css">
+        label {
+            display: block;
+            padding-top:10px;
+            font-weight: bold;
+            color: midnightblue;
+        }
+        input[type=radio]+label,
+        input[type=checkbox]+label,
+        label:has(input) {
+          display: inline;
+          font-weight: normal;
+        }
+        textarea {
+          width: 400px;
+          height:80px;
+        }
+        form {
+          margin-top: 20px;
+          background: rgba(240,240,255,0.6);
+          padding: 20px;
+          border-radius: 10px;
+          width: 450px;
+        }
+        input[type=submit] {
+          margin-top: 15px;
+          padding: 8px 15px;
+          font-weight: bold;
+          background-color: midnightblue;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        input[type=submit]:hover {
+          background-color: darkred;
+        }
+    </style>
+  </head>
+  <body>
+      <h1>Forms Worksheet</h1>
+      <p class="question">
+        In the FORM element below, add elements to create a form that looks like this:
+        <br>
+        <img src="../images/html-form.png" alt="HTML form">
+      </p>
+      <p>
+        Put a LABEL element before each form control, which indicates what information should be entered.
+      </p>
+
+      <div class="answer">
+        <form id="frmSurvey" action="https://www.webcoder.club/form-handler" method="POST">
+          
+          <!-- First Name -->
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <!-- Favorite Color -->
+          <label for="color">Favorite Color:</label>
+          <select id="color" name="color" required>
+            <option value="">--Select a Color--</option>
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="other">Other</option>
+          </select>
+
+          <!-- Favorite Meal -->
+          <label>Favorite Meal:</label>
+          <input type="radio" id="breakfast" name="meal" value="breakfast" required>
+          <label for="breakfast">Breakfast</label>
+
+          <input type="radio" id="lunch" name="meal" value="lunch">
+          <label for="lunch">Lunch</label>
+
+          <input type="radio" id="dinner" name="meal" value="dinner">
+          <label for="dinner">Dinner</label>
+
+          <!-- Places Visited -->
+          <label>Places Visited:</label>
+          <input type="checkbox" id="europe" name="visited" value="Europe">
+          <label for="europe">Europe</label><br>
+
+          <input type="checkbox" id="africa" name="visited" value="Africa">
+          <label for="africa">Africa</label><br>
+
+          <input type="checkbox" id="asia" name="visited" value="Asia">
+          <label for="asia">Asia</label><br>
+
+          <!-- Favorite Quote -->
+          <label for="quote">Favorite Quote:</label>
+          <textarea id="quote" name="quote" placeholder="Type your favorite quote here..." required></textarea>
+
+          <!-- Submit Button -->
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+
+      <footer>
+        &copy; 2024 Niall Kader
+      </footer>
+  </body>
+</html>
