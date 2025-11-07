@@ -1,0 +1,98 @@
+:root {
+  --bg: #0a0a0a;
+  --accent: #ff0033;
+  --text: #ffffff;
+  --glow: 0 0 15px var(--accent);
+  --transition: all 0.4s ease;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: var(--glow);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent);
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--accent);
+  box-shadow: var(--glow);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  line-height: 1.6;
+}
+
+h2, h3, h4 {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+p, li {
+  font-size: 1.1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* Button styling */
+.back-btn {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-shadow: 0 0 10px var(--accent);
+  box-shadow: var(--glow);
+  margin: 20px auto;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 25px var(--accent);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid var(--accent);
+  box-shadow: var(--glow);
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.8);
+}
